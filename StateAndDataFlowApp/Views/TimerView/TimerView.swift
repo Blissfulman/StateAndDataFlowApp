@@ -28,6 +28,5 @@ struct TimerView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         TimerView()
-            .environmentObject(UserManager())
     }
 }

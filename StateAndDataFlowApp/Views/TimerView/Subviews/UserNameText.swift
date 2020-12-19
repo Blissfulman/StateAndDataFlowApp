@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct UserNameText: View {
-    @EnvironmentObject var user: UserManager
+    @ObservedObject var storageManager = StorageManager()
     
     var body: some View {
-        Text("Hi, \(user.name)")
+        Text("Hi, \(storageManager.name)")
             .font(.largeTitle)
     }
 }
@@ -20,6 +20,5 @@ struct UserNameText: View {
 struct UserNameText_Previews: PreviewProvider {
     static var previews: some View {
         UserNameText()
-            .environmentObject(UserManager())
     }
 }

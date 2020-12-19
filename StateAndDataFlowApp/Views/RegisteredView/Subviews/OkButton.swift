@@ -11,8 +11,6 @@ struct OkButton: View {
     let isAllowedRegistration: Bool
     let action: () -> Void
     
-    @EnvironmentObject var user: UserManager
-
     var body: some View {
         Button(action: action) {
             HStack {

@@ -24,6 +24,8 @@
 		CE9BEAAB258E3F400006EFEA /* TimerCounterText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BEAAA258E3F400006EFEA /* TimerCounterText.swift */; };
 		CE9BEAAF258E42540006EFEA /* StyledModifierButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BEAAE258E42540006EFEA /* StyledModifierButton.swift */; };
 		CE9BEAB6258E43990006EFEA /* StyledModifierText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BEAB5258E43990006EFEA /* StyledModifierText.swift */; };
+		CE9BEABB258E56C40006EFEA /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BEABA258E56C40006EFEA /* StorageManager.swift */; };
+		CE9BEABF258E9B240006EFEA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BEABE258E9B240006EFEA /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		CE9BEAAA258E3F400006EFEA /* TimerCounterText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCounterText.swift; sourceTree = "<group>"; };
 		CE9BEAAE258E42540006EFEA /* StyledModifierButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledModifierButton.swift; sourceTree = "<group>"; };
 		CE9BEAB5258E43990006EFEA /* StyledModifierText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledModifierText.swift; sourceTree = "<group>"; };
+		CE9BEABA258E56C40006EFEA /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		CE9BEABE258E9B240006EFEA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				A8F885D0258A90EC009F31A3 /* UserManager.swift */,
+				CE9BEABA258E56C40006EFEA /* StorageManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				A8F885CA258A88A1009F31A3 /* TimeCounter.swift */,
+				CE9BEABE258E9B240006EFEA /* Constants.swift */,
 			);
 			path = "Additional Files";
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8F885CB258A88A1009F31A3 /* TimeCounter.swift in Sources */,
+				CE9BEABF258E9B240006EFEA /* Constants.swift in Sources */,
 				A8F885BD258A7F9B009F31A3 /* TimerView.swift in Sources */,
 				A8F885D4258A937F009F31A3 /* StarterView.swift in Sources */,
 				CE9BEA9C258E37520006EFEA /* NameTextField.swift in Sources */,
@@ -256,6 +263,7 @@
 				A8F885D1258A90EC009F31A3 /* UserManager.swift in Sources */,
 				A8F885BB258A7F9B009F31A3 /* StateAndDataFlowAppApp.swift in Sources */,
 				CE9BEA98258E2DAF0006EFEA /* OkButton.swift in Sources */,
+				CE9BEABB258E56C40006EFEA /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

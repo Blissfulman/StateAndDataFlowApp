@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct LogOutButton: View {
-    @EnvironmentObject var user: UserManager
+    @EnvironmentObject var userManager: UserManager
+    @ObservedObject var storageManager = StorageManager()
 
     var body: some View {
-        Button(action: { user.isRegistered = false }) {
+        Button(action: buttonTapped) {
             Text("Log out")
                 .styled()
         }
         .styled(color: .blue)
+    }
+    
+    private func buttonTapped() {
+        storageManager.name = ""
+        userManager.isRegistered = false
     }
 }
 

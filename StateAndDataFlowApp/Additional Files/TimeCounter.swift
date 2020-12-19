@@ -10,13 +10,14 @@ import Combine
 
 final class TimeCounter: ObservableObject {
     let objectWillChange = PassthroughSubject<TimeCounter, Never>()
+    
     var counter = 3
     var timer: Timer?
     var buttonTitle = "Start"
     var isInProcess = false
     
     func startTimer() {
-        if counter > 0 {
+        if counter != 0 {
             timer = Timer.scheduledTimer(
                 timeInterval: 1,
                 target: self,
