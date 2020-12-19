@@ -7,7 +7,7 @@
 
 import Combine
 
-class UserManager: ObservableObject {
+final class UserManager: ObservableObject {
     @Published var isRegistered = false
     var name = ""
 }

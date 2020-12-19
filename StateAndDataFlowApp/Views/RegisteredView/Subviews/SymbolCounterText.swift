@@ -10,19 +10,9 @@ import SwiftUI
 struct SymbolCounterText: View {
     let count: Int
     
-    @State private var textColor = Color.red
-    
     var body: some View {
         Text("\(count)")
-            .foregroundColor(textColor)
-            .onChange(of: count) { count in
-                switch count {
-                case ..<3:
-                    textColor = Color.red
-                default:
-                    textColor = Color.green
-                }
-            }
+            .foregroundColor(count > 2 ? .green : .red)
     }
 }
 
