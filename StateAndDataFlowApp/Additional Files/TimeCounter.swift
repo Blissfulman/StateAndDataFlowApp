@@ -8,11 +8,12 @@
 import Foundation
 import Combine
 
-class TimeCounter: ObservableObject {
+final class TimeCounter: ObservableObject {
     let objectWillChange = PassthroughSubject<TimeCounter, Never>()
     var counter = 3
     var timer: Timer?
     var buttonTitle = "Start"
+    var isInProcess = false
     
     func startTimer() {
         if counter > 0 {
@@ -23,6 +24,7 @@ class TimeCounter: ObservableObject {
                 userInfo: nil,
                 repeats: true
             )
+            isInProcess = true
         }
         buttonDidTapped()
     }
@@ -41,6 +43,7 @@ class TimeCounter: ObservableObject {
     private func killTimer() {
         timer?.invalidate()
         timer = nil
+        isInProcess = false
     }
     
     private func buttonDidTapped() {

@@ -80,7 +80,7 @@
 			children = (
 				A8F885BA258A7F9B009F31A3 /* StateAndDataFlowAppApp.swift */,
 				CE9BEA89258E2B370006EFEA /* Views */,
-				A8F885CA258A88A1009F31A3 /* TimeCounter.swift */,
+				CE9BEAB8258E53760006EFEA /* Additional Files */,
 				CE9BEAB1258E42650006EFEA /* Custom Modifiers */,
 				CE9BEA8E258E2C060006EFEA /* Managers */,
 				A8F885BE258A7FA0009F31A3 /* Assets.xcassets */,
@@ -162,6 +162,14 @@
 				CE9BEAB5258E43990006EFEA /* StyledModifierText.swift */,
 			);
 			path = "Custom Modifiers";
+			sourceTree = "<group>";
+		};
+		CE9BEAB8258E53760006EFEA /* Additional Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8F885CA258A88A1009F31A3 /* TimeCounter.swift */,
+			);
+			path = "Additional Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

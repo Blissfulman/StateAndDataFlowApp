@@ -15,7 +15,8 @@ struct StartTimerButton: View {
             Text("\(timer.buttonTitle)")
                 .styled()
         }
-        .styled(color: .red)
+        .styled(color: timer.isInProcess ? .gray : .red)
+        .disabled(timer.isInProcess)
     }
 }
 

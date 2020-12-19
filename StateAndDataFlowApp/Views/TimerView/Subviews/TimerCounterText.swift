@@ -12,7 +12,8 @@ struct TimerCounterText: View {
     
     var body: some View {
         Text("\(value)")
-            .font(.largeTitle)    }
+            .font(.largeTitle)
+    }
 }
 
 struct TimerCounterText_Previews: PreviewProvider {
