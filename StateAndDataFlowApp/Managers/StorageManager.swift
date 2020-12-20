@@ -5,24 +5,24 @@
 //  Created by User on 20.12.2020.
 //
 
-import Foundation
+import SwiftUI
 
 final class StorageManager: ObservableObject {
 
     static let shared = StorageManager()
     
-    private let userDefaults = UserDefaults.standard
-    private let userDataKey = "user"
+    static let userDataKey = "user"
+    
+    @AppStorage(userDataKey) private var userData = Data()
     
     private init() {}
     
     func saveUser(user: User) {
         guard let userData = try? JSONEncoder().encode(user) else { return }
-        userDefaults.set(userData, forKey: userDataKey)
+        self.userData = userData
     }
     
     func getUser() -> User {
-        guard let userData = userDefaults.object(forKey: userDataKey) as? Data else { return User() }
         guard let user = try? JSONDecoder().decode(User.self, from: userData) else { return User() }
         return user
     }
@@ -30,6 +30,6 @@ final class StorageManager: ObservableObject {
     func clear(userManager: UserManager) {
         userManager.user.isRegistered = false
         userManager.user.name = ""
-        userDefaults.removeObject(forKey: userDataKey)
+        UserDefaults.standard.removeObject(forKey: StorageManager.userDataKey)
     }
 }

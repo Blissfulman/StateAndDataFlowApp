@@ -24,6 +24,7 @@
 		CE9BEAAF258E42540006EFEA /* StyledModifierButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BEAAE258E42540006EFEA /* StyledModifierButton.swift */; };
 		CE9BEAB6258E43990006EFEA /* StyledModifierText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BEAB5258E43990006EFEA /* StyledModifierText.swift */; };
 		CE9BEABB258E56C40006EFEA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BEABA258E56C40006EFEA /* UserManager.swift */; };
+		CEAD6556258FC5830043E0C9 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD6555258FC5830043E0C9 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		CE9BEAAE258E42540006EFEA /* StyledModifierButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledModifierButton.swift; sourceTree = "<group>"; };
 		CE9BEAB5258E43990006EFEA /* StyledModifierText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledModifierText.swift; sourceTree = "<group>"; };
 		CE9BEABA258E56C40006EFEA /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		CEAD6555258FC5830043E0C9 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9BEABA258E56C40006EFEA /* UserManager.swift */,
+				CEAD6555258FC5830043E0C9 /* StorageManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				A8F885BB258A7F9B009F31A3 /* StateAndDataFlowAppApp.swift in Sources */,
 				CE9BEA98258E2DAF0006EFEA /* OkButton.swift in Sources */,
 				CE9BEABB258E56C40006EFEA /* UserManager.swift in Sources */,
+				CEAD6556258FC5830043E0C9 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
