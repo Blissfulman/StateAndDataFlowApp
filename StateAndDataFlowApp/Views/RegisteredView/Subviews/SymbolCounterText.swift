@@ -9,15 +9,16 @@ import SwiftUI
 
 struct SymbolCounterText: View {
     let count: Int
+    let isValidName: Bool
     
     var body: some View {
         Text("\(count)")
-            .foregroundColor(count > 2 ? .green : .red)
+            .foregroundColor(isValidName ? .green : .red)
     }
 }
 
 struct SymbolCounterText_Previews: PreviewProvider {
     static var previews: some View {
-        SymbolCounterText(count: 4)
+        SymbolCounterText(count: 5, isValidName: true)
     }
 }

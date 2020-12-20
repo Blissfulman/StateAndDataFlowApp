@@ -8,11 +8,20 @@
 import Foundation
 
 final class UserManager: ObservableObject {
-    private static let key = "name"
+    @Published var user = User()
     
-    @Published var name: String = UserDefaults.standard.string(forKey: key) ?? "" {
-        didSet {
-            UserDefaults.standard.set(name, forKey: Self.key)
-        }
+    var isValidName: Bool {
+        user.name.count > 2
     }
+    
+    init() {}
+    
+    init(user: User) {
+        self.user = user
+    }
+}
+
+struct User: Codable {
+    var name = ""
+    var isRegistered = false
 }

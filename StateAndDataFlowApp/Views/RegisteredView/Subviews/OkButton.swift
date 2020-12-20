@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OkButton: View {
-    let isAllowedRegistration: Bool
+    let isValidName: Bool
     let action: () -> Void
     
     var body: some View {
@@ -18,12 +18,12 @@ struct OkButton: View {
                 Text("Ok")
             }
         }
-        .disabled(!isAllowedRegistration)
+        .disabled(!isValidName)
     }
 }
 
 struct OkButton_Previews: PreviewProvider {
     static var previews: some View {
-        OkButton(isAllowedRegistration: false, action: {})
+        OkButton(isValidName: false, action: {})
     }
 }

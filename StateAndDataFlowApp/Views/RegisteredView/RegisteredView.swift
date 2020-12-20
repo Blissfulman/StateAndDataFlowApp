@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct RegisteredView: View {
-    @State private var isAllowedRegistration = false
-    @State private var name = ""
-    
     @EnvironmentObject var userManager: UserManager
 
     var body: some View {
@@ -18,14 +15,14 @@ struct RegisteredView: View {
             HStack {
                 // Со спейсером текстовое поле точнее центруется по горизонтали
                 Spacer()
-                NameTextField(name: $name,
-                              isAllowedRegistration: $isAllowedRegistration)
-                SymbolCounterText(count: name.count)
+                NameTextField(name: $userManager.user.name)
+                SymbolCounterText(count: userManager.user.name.count,
+                                  isValidName: userManager.isValidName)
             }
-            OkButton(isAllowedRegistration: isAllowedRegistration) {
-                userManager.name = name
+            OkButton(isValidName: userManager.isValidName) {
+                userManager.user.isRegistered = true
+                StorageManager.shared.saveUser(user: userManager.user)
             }
-            
         }
         .padding()
     }

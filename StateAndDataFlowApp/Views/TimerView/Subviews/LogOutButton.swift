@@ -19,7 +19,9 @@ struct LogOutButton: View {
     }
     
     private func buttonTapped() {
-        userManager.name = ""
+        userManager.user.name = ""
+        userManager.user.isRegistered = false
+        StorageManager.shared.clear(userManager: userManager)
     }
 }
 

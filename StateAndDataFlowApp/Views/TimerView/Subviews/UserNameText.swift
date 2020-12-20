@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct UserNameText: View {
-    @ObservedObject var userManager = UserManager()
+    @EnvironmentObject var userManager: UserManager
     
     var body: some View {
-        Text("Hi, \(userManager.name)")
+        Text("Hi, \(userManager.user.name)")
             .font(.largeTitle)
     }
 }
