@@ -12,7 +12,6 @@ struct RegisteredView: View {
     @State private var name = ""
     
     @EnvironmentObject var userManager: UserManager
-    @ObservedObject var storageManager = StorageManager()
 
     var body: some View {
         VStack {
@@ -24,8 +23,7 @@ struct RegisteredView: View {
                 SymbolCounterText(count: name.count)
             }
             OkButton(isAllowedRegistration: isAllowedRegistration) {
-                storageManager.name = name
-                userManager.isRegistered = true
+                userManager.name = name
             }
             
         }

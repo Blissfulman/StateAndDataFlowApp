@@ -2,12 +2,17 @@
 //  UserManager.swift
 //  StateAndDataFlowApp
 //
-//  Created by Alexey Efimov on 17.12.2020.
+//  Created by User on 19.12.2020.
 //
 
 import Foundation
-import Combine
 
 final class UserManager: ObservableObject {
-    @Published var isRegistered: Bool = StorageManager().name != ""
+    private static let key = "name"
+    
+    @Published var name: String = UserDefaults.standard.string(forKey: key) ?? "" {
+        didSet {
+            UserDefaults.standard.set(name, forKey: Self.key)
+        }
+    }
 }

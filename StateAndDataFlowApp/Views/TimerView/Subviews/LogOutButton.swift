@@ -9,7 +9,6 @@ import SwiftUI
 
 struct LogOutButton: View {
     @EnvironmentObject var userManager: UserManager
-    @ObservedObject var storageManager = StorageManager()
 
     var body: some View {
         Button(action: buttonTapped) {
@@ -20,13 +19,13 @@ struct LogOutButton: View {
     }
     
     private func buttonTapped() {
-        storageManager.name = ""
-        userManager.isRegistered = false
+        userManager.name = ""
     }
 }
 
 struct LogOutButton_Previews: PreviewProvider {
     static var previews: some View {
         LogOutButton()
+            .environmentObject(UserManager())
     }
 }
